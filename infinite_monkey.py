@@ -84,7 +84,7 @@ def repeated_try():
         
 def main():
     if not check_input(req_sentence):
-        raise TypeError("invalid string. can only contain characters: a-z and space")
+        raise ValueError("invalid string. can only contain characters: a-z and space")
     repeated_try()
     
 if __name__ == "__main__":
