@@ -2,10 +2,10 @@ import string
 
 alfabet = list(string.ascii_lowercase)
 
-with open(r"C:\temp\Python\curs\guta.txt", "r") as f:
-    file_data = f.read()
+path = ""
 
-#print(file_data)
+with open(path, "r") as f:
+    file_data = f.read()
 
 aparente = []
 

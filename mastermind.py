@@ -1,3 +1,19 @@
+"""
+The program generates a random 4 digit number.
+Try to guess the number in max 10 tries to win.
+Rules:
+if the digit is in the right position you get R.
+if the digit is present in the randomly generated number, but in the wrong position you get Y.
+if the digit is not present in the randomly generated number you get B.
+
+EXAMPLE:
+Randomly generated number: 1234
+Your guess: 1240
+Output: RRYB
+
+After each try you will get closer to guessing the number, good luck!
+"""
+
 import random
 
 def new_code():
@@ -9,11 +25,11 @@ def guess_code(code):
     tries = 0
     while True:
         score = ""
-        choice = input("enter 4 digit number (0-9): ")
+        choice = input("Try to guess the 4 digit number (0-9): ")
         choice = [int(i) for i in choice]
         
         pos = 0
-        for num in choice:
+        for _ in choice:
             if choice[pos] == code[pos]:
                 score += "R"
             elif choice[pos] in code:
@@ -30,10 +46,8 @@ def guess_code(code):
         if tries == 10:
             print("you lose..")
             break      
-    
         
 code1 = new_code()
-print(code1)
 guess_code(code1)
 
 

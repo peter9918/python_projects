@@ -66,7 +66,7 @@ def repeated_try():
     
     while req_sentence != sentence:
         
-        time.sleep(0.00000000001)
+        time.sleep(1)
         
         if current_match > highest_match:
             highest_match = current_match
