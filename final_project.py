@@ -322,30 +322,3 @@ def create_random_bike() -> Bikes:
     bike = Bikes(license, make, year, mileage, has_abs, price)
     return bike
 
-car1 = create_random_car()
-print(car1)
-car1.change_doors(2)
-car1.refurbish()
-print(car1.__dict__)
-
-bike1 = create_random_bike()
-print(bike1)
-bike1.add_mods(10)
-bike1.change_seats(1)
-print(bike1.__dict__)
-
-bike2 = create_random_bike()
-print(bike2)
-print(bike2.compare(car1, bike1))
-
-file1 = Json_DB(path1, "test.json")
-print(file1)
-print(file1.__dict__)
-file1.create_file()
-file1.write_to_file(car1, bike1, bike2)
-print(file1)
-
-cars = [create_random_car() for _ in range(2)]
-bikes = [create_random_bike() for _ in range(2)]
-file1.write_to_file(car1, bike1, bikes, cars)
-print(file1)
